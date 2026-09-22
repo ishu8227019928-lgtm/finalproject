@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Doctor Appointment</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">MediCare</div>
+
+        <nav>
+            <a href="#doctors">Doctors</a>
+            <a href="#departments">Departments</a>
+            <a href="#appointment">Appointment</a>
+           
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div>
+            <h1>Find Your Doctor</h1>
+
+            <p>
+                Browse doctors, choose a department,
+                and book your appointment easily.
+            </p>
+
+            <a href="#doctors" class="hero-btn">
+                Find a Doctor
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- Department Section -->
+    <section id="departments" class="section">
+
+        <h2>Select Department</h2>
+
+        <div class="departments">
+
+            <button class="department active"
+                    onclick="filterDoctors('All')">
+                All
+            </button>
+
+            <button class="department"
+                    onclick="filterDoctors('Cardiology')">
+                Cardiology
+            </button>
+
+            <button class="department"
+                    onclick="filterDoctors('Neurology')">
+                Neurology
+            </button>
+
+            <button class="department"
+                    onclick="filterDoctors('Dermatology')">
+                Dermatology
+            </button>
+
+            <button class="department"
+                    onclick="filterDoctors('Pediatrics')">
+                Pediatrics
+            </button>
+
+            <button class="department"
+                    onclick="filterDoctors('Sexology')">
+                Sexology
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="section">
+
+        <h2>Our Doctors</h2>
+
+        <div id="doctorContainer" class="doctor-container">
+
+            <!-- Doctors will be added by JavaScript -->
+
+        </div>
+
+    </section>
+
+
+    <!-- Appointment Section -->
+    <section id="appointment" class="appointment-section">
+
+        <h2>Book Your Appointment</h2>
+
+        <div class="appointment-box">
+
+            <form id="appointmentForm">
+
+                <label>Patient Name</label>
+                <input
+                    type="text"
+                    id="patientName"
+                    placeholder="Enter your name"
+                    required
+                    
+                >
+               
+
+
+                <label>Selected Doctor</label>
+
+                <!-- <input
+                    type="text"
+                    id="selectedDoctor"
+                    placeholder="Select a doctor"
+                    readonly
+                    required
+                > -->
+                <select id="selectedDoctor" >
+                  <option>Select your Doctor</option>
+                  <option>Dr.Amod Kumar</option>
+                  <option>Dr.Priya Raj</option>
+                  <option>Dr. Kaushal Bhaskar</option>
+                  <option>Dr. Mani Raj</option>
+                  <option>Dr. Mukul Kumar</option>
+                  <option>Dr. Anshuman kumar</option>
+                </select>
+
+
+                <label>Appointment Date</label>
+
+                <input
+                    type="date"
+                    id="appointmentDate"
+                    required
+                >
+
+
+                <label>Appointment Time</label>
+
+                <select id="appointmentTime" required>
+
+                    <option value="">
+                        Select Time Slot
+                    </option>
+
+                    <option value="09:00 AM">
+                        09:00 AM
+                    </option>
+
+                    <option value="10:00 AM">
+                        10:00 AM
+                    </option>
+
+                    <option value="11:00 AM">
+                        11:00 AM
+                    </option>
+
+                    <option value="02:00 PM">
+                        02:00 PM
+                    </option>
+
+                    <option value="03:00 PM">
+                        03:00 PM
+                    </option>
+
+                    <option value="04:00 PM">
+                        04:00 PM
+                    </option>
+
+                </select>
+
+
+                <button type="submit" class="book-btn">
+                    Book Appointment
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- Appointment Details -->
+    <section id="details" class="details-section">
+
+        <div id="appointmentDetails" class="details-box">
+
+            <h2>Appointment Details</h2>
+
+            <p>
+                Your appointment details will appear here
+                after booking.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 MediCare. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
